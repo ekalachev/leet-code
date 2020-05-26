@@ -1,6 +1,7 @@
 package com.company.array.remove_duplicates_from_sorted_array;
 
 class Solution {
+    // time complexity: O(n), space complexity: O(1)
     public int removeDuplicates(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;

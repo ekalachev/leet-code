@@ -1,6 +1,7 @@
 package com.company.array.best_time_to_buy_and_sell_stock_2;
 
 public class Solution {
+    // time complexity: O(n), space complexity: O(1)
     public int maxProfit(int[] prices) {
         if(prices == null || prices.length < 1) {
             return 0;
