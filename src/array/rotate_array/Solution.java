@@ -1,7 +1,7 @@
 package array.rotate_array;
 
 public class Solution {
-
+    // time complexity: O(n), space complexity: O(1)
     public void rotate(int[] nums, int k) {
         if (nums == null || nums.length < 2 || k == 0) return;
 
@@ -25,9 +25,9 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7};
+        int[] nums = new int[]{1,2,3,4};
 
-        solution.rotate(nums, 4);
+        solution.rotate(nums, 2);
 
         for (int num : nums) {
             System.out.println(num);
