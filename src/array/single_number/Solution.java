@@ -7,11 +7,11 @@ public class Solution {
     public int singleNumber(int[] nums) {
         HashSet<Integer> set = new HashSet<>();
 
-        for(int i = 0; i < nums.length; i++) {
-            if(set.contains(nums[i]))
-                set.remove(nums[i]);
+        for (int num : nums) {
+            if (set.contains(num))
+                set.remove(num);
             else
-                set.add(nums[i]);
+                set.add(num);
         }
 
         return set.stream().findFirst().get();
@@ -21,8 +21,8 @@ public class Solution {
     public int singleNumber2(int[] nums) {
         int result = 0;
 
-        for(int i = 0; i < nums.length; i++) {
-            result ^= nums[i];
+        for (int num : nums) {
+            result ^= num;
         }
 
         return result;
@@ -30,7 +30,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] nums = new int[] {2,2,1};
+        int[] nums = new int[]{2, 2, 1};
 
         int result = solution.singleNumber(nums);
         System.out.println(result);
