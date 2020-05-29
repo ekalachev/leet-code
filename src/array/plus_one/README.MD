@@ -19,3 +19,10 @@ Input: [4,3,2,1]
 Output: [4,3,2,2]
 Explanation: The array represents the integer 4321.
 ```
+
+### Example 3:
+```
+Input: [9,9,9]
+Output: [1,0,0,0]
+Explanation: The array represents the integer 1000.
+```
