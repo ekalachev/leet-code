@@ -1,38 +1,30 @@
 package array.intersection_of_two_arrays_2;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class Solution {
-    // time complexity: O(n1 + n2), space complexity: O((n1 < n2 ? n1 : n2) + (n1 + n2))
+    // time complexity: O(n + m), space complexity: O((n < m ? n : m) + (n < m ? n : m))
     public int[] intersect(int[] nums1, int[] nums2) {
         int[] smaller = nums1.length >= nums2.length ? nums2 : nums1;
         int[] bigger = nums1.length < nums2.length ? nums2 : nums1;
 
         HashMap<Integer, Integer> map = new HashMap<>();
-        for(int num : smaller) {
-            if(map.containsKey(num))
-                map.put(num, map.get(num) + 1);
-            else
-                map.put(num, 1);
-        }
+        for (int num : smaller)
+            map.put(num, map.getOrDefault(num, 0) + 1);
 
-        List<Integer> result = new ArrayList<>();
-        for(int num : bigger) {
-            if(map.containsKey(num)) {
-                int stored = map.get(num);
-                if(stored == 1)
-                    map.remove(num);
-                else
-                    map.put(num, stored - 1);
-
-                result.add(num);
+        Queue<Integer> queue = new LinkedList<>();
+        for (int num : bigger)
+            if (map.containsKey(num) && map.get(num) > 0) {
+                queue.add(num);
+                map.put(num, map.get(num) - 1);
             }
-        }
 
-        return result.stream().mapToInt(Integer::intValue).toArray();
+        int[] result = new int[queue.size()];
+        int i = 0;
+        while (!queue.isEmpty())
+            result[i++] = queue.poll();
+
+        return result;
     }
 
     public static void main(String[] args) {
