@@ -3,7 +3,7 @@ package array.plus_one;
 import java.util.Arrays;
 
 public class Solution {
-    // time complexity: O(n), space complexity: O(1) | O(n)
+    // time complexity: O(n), space complexity: O(1) | O(n) in worst case
     public int[] plusOne(int[] digits) {
         for(int i = digits.length - 1; i >= 0; i--) {
             if(digits[i] < 9) {
