@@ -6,8 +6,27 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Solution {
-    // time complexity: O(s), space complexity: O(s)
+    // time complexity: O(s log s), space complexity: O(1) (only for unicode characters)
     public boolean isAnagram(String s, String t) {
+        if (s.length() != t.length()) return false;
+
+        int n = s.length();
+        int[] map = new int[26];
+
+        for (int i = 0; i < n; i++)
+            map[s.charAt(i) - 'a']++;
+
+        for (int i = 0; i < n; i++) {
+            int index = t.charAt(i) - 'a';
+            map[index]--;
+            if (map[index] < 0) return false;
+        }
+
+        return true;
+    }
+
+    // time complexity: O(s), space complexity: O(s)
+    public boolean isAnagram2(String s, String t) {
         if (s.length() != t.length()) return false;
 
         int n = s.length();
@@ -28,7 +47,7 @@ public class Solution {
     }
 
     // time complexity: O(s log s), space complexity: O(s)
-    public boolean isAnagram2(String s, String t) {
+    public boolean isAnagram3(String s, String t) {
         if (s.length() != t.length()) return false;
 
         char[] sArr = s.toCharArray();
@@ -48,6 +67,9 @@ public class Solution {
         System.out.println(isAnagram);
 
         isAnagram = solution.isAnagram2(s, t);
+        System.out.println(isAnagram);
+
+        isAnagram = solution.isAnagram3(s, t);
         System.out.println(isAnagram);
     }
 }
