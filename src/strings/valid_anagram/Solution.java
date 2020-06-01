@@ -11,15 +11,15 @@ public class Solution {
         if (s.length() != t.length()) return false;
 
         int n = s.length();
-        int[] map = new int[26];
+        int[] letters = new int[26];
 
         for (int i = 0; i < n; i++)
-            map[s.charAt(i) - 'a']++;
+            letters[s.charAt(i) - 'a']++;
 
         for (int i = 0; i < n; i++) {
             int index = t.charAt(i) - 'a';
-            map[index]--;
-            if (map[index] < 0) return false;
+            letters[index]--;
+            if (letters[index] < 0) return false;
         }
 
         return true;
