@@ -1,5 +1,7 @@
 package linkedList.reverse_linked_list;
 
+import linkedList.ListNode;
+
 public class Solution {
     // time complexity: O(n), space complexity: O(1)
     public ListNode reverseList(ListNode head) {
