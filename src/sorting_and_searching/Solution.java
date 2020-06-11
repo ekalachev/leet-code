@@ -3,7 +3,7 @@ package sorting_and_searching;
 import java.util.Arrays;
 
 public class Solution {
-    // time complexity: O(n + M), space complexity: O(1)
+    // time complexity: O(n + m), space complexity: O(1)
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         if (n == 0) return;
 
