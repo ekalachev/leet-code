@@ -5,15 +5,11 @@ import java.util.Arrays;
 public class Solution {
     // time complexity: O(n + m), space complexity: O(1)
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        if (n == 0) return;
-
-        int index = n + m - 1;
-        for (int i = m - 1, j = n - 1; index >= 0; ) {
+        int index = n + m - 1, i = m - 1, j = n - 1;
+        while (j >= 0) {
             nums1[index--] = i < 0 || nums2[j] >= nums1[i]
                     ? nums2[j--]
                     : nums1[i--];
-
-            if (j < 0) break;
         }
     }
 
