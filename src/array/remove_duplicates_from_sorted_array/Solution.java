@@ -3,23 +3,15 @@ package array.remove_duplicates_from_sorted_array;
 class Solution {
     // time complexity: O(n), space complexity: O(1)
     public int removeDuplicates(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return 0;
-        }
-
-        int currentPosition = 1;
-        int prev = nums[0];
-
-        for (int i = 1; i < nums.length; i++) {
-            if (prev != nums[i]) {
-                nums[currentPosition] = nums[i];
-
-                currentPosition++;
-                prev = nums[i];
+        int index = 0, n = nums.length;
+        for(int i = 1; i < n; i++) {
+            if(nums[index] != nums[i]) {
+                index++;
+                nums[index] = nums[i];
             }
         }
 
-        return currentPosition;
+        return index + 1;
     }
 
     public static void main(String[] args) {
