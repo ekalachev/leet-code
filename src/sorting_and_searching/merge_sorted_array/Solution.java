@@ -1,4 +1,4 @@
-package sorting_and_searching;
+package sorting_and_searching.merge_sorted_array;
 
 import java.util.Arrays;
 
