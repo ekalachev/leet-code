@@ -20,7 +20,7 @@ public class Solution {
 
         while (index < n && Character.isDigit(str.charAt(index))) {
 
-            int digit = Character.getNumericValue(str.charAt(index)) * sign;
+            int digit = Character.getNumericValue(str.charAt(index++)) * sign;
 
             if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7))
                 return Integer.MAX_VALUE;
@@ -28,8 +28,6 @@ public class Solution {
                 return Integer.MIN_VALUE;
 
             result = result * 10 + digit;
-
-            index++;
         }
 
         return result;
