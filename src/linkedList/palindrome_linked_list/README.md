@@ -18,5 +18,13 @@ Output: true
 
 ```
 
+### Example 3:
+
+```
+Input: 1->2->3->2->1
+Output: true
+
+```
+
 ### Follow up:
 Could you do it in O(n) time and O(1) space?
