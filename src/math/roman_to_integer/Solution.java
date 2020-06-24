@@ -23,12 +23,11 @@ public class Solution {
             return 0;
 
         int number = nums.get(s.charAt(n - 1));
+        
         for (int i = n - 2; i >= 0; i--) {
             int prev = i + 1;
-            while (i >= 0 && nums.get(s.charAt(i)) < nums.get(s.charAt(prev))) {
-                number -= nums.get(s.charAt(i));
-                i--;
-            }
+            while (i >= 0 && nums.get(s.charAt(i)) < nums.get(s.charAt(prev)))
+                number -= nums.get(s.charAt(i--));
 
             if (i >= 0)
                 number += nums.get(s.charAt(i));
