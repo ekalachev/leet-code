@@ -16,6 +16,7 @@ public class Solution {
         }
     };
 
+    // time complexity: O(n), space complexity: O(1)
     public int romanToInt(final String s) {
         int n = s.length();
 
