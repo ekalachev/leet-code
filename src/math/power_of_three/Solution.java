@@ -11,7 +11,7 @@ public class Solution {
     public static void main(final String[] args) {
 
         Solution solution = new Solution();
-        boolean result = solution.isPowerOfThree(3);
+        boolean result = solution.isPowerOfThree(27);
 
         System.out.println("Result is: " + result);
     }
