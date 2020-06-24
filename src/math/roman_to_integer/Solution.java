@@ -23,7 +23,7 @@ public class Solution {
             return 0;
 
         int number = nums.get(s.charAt(n - 1));
-        
+
         for (int i = n - 2; i >= 0; i--) {
             int prev = i + 1;
             while (i >= 0 && nums.get(s.charAt(i)) < nums.get(s.charAt(prev)))
@@ -42,6 +42,6 @@ public class Solution {
         Solution solution = new Solution();
         int num = solution.romanToInt(roman);
 
-        System.out.println(roman + " = " + num);
+        System.out.println(roman + " = " + num); // MCMXCIV = 1994
     }
 }
