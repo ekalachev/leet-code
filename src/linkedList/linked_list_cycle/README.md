@@ -13,7 +13,7 @@ Output: true
 Explanation: There is a cycle in the linked list, where tail connects to the second node.
 
 ```
-![Optional Text](example1.png)
+![Optional Text](./example1.png)
 
 ### Example 2:
 ```
@@ -22,7 +22,7 @@ Output: true
 Explanation: There is a cycle in the linked list, where tail connects to the first node.
 
 ```
-![Optional Text](example2.png)
+![Optional Text](./example2.png)
 
 ### Example 3:
 ```
@@ -31,7 +31,7 @@ Output: false
 Explanation: There is no cycle in the linked list.
 
 ```
-![Optional Text](example3.png)
+![Optional Text](./example3.png)
 
 ### Follow up:
 
