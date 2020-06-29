@@ -1,6 +1,6 @@
-package linkedList.merge_two_sorted_lists;
+package linked_list.merge_two_sorted_lists;
 
-import linkedList.ListNode;
+import linked_list.ListNode;
 
 public class Solution {
     // time complexity: O(n + m), space complexity: O(1)

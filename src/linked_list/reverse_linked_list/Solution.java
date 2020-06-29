@@ -1,6 +1,6 @@
-package linkedList.reverse_linked_list;
+package linked_list.reverse_linked_list;
 
-import linkedList.ListNode;
+import linked_list.ListNode;
 
 public class Solution {
     // time complexity: O(n), space complexity: O(1)

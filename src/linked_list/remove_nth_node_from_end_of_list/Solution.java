@@ -1,6 +1,6 @@
-package linkedList.remove_nth_node_from_end_of_list;
+package linked_list.remove_nth_node_from_end_of_list;
 
-import linkedList.ListNode;
+import linked_list.ListNode;
 
 public class Solution {
     // time complexity: O(n), space complexity: O(1)
